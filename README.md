@@ -22,55 +22,61 @@ cp .env.example .env && \
 npm start
 ```
 
-Sistema de Reintentos (Offline → Online)
+## ⚡ Sistema de Reintentos (Offline → Online)
 
-PsicoCitas incluye un sistema robusto de reintentos por usuario:
+PsicoCitas incluye un sistema avanzado de reintentos por usuario, perfecto para conexiones inestables:
 
-Si el usuario pierde internet, los correos se guardan en
-colaCorreos_emailUsuario.
+Si el usuario pierde internet, los correos se guardan automáticamente en
+colaCorreos_emailDelUsuario
 
-Cada usuario (paciente o psicólogo) tiene su propia cola, evitando mezclar información.
+Cada usuario (paciente o psicólogo) tiene su propia cola aislada
 
-Al volver la conexión, los correos se reenvían automáticamente.
+Al volver la conexión, los correos se envían automáticamente
 
-Existe un botón para reenviar manualmente.
+Existe un botón para reenviar manualmente en cualquier momento
 
-Totalmente aislado por cuenta, evitando errores entre usuarios.
+No se mezclan correos entre cuentas diferentes
 
-👤 Roles del sistema
-Paciente
+Funciona incluso si hay múltiples pacientes y psicólogos conectados
 
-Agenda citas con psicólogos.
+Este sistema asegura que ninguna notificación se pierda.
+---
 
-Selecciona fechas y horarios disponibles.
+## 👤 Roles del sistema
+**🩺 Paciente**
+Agenda citas con cualquier psicólogo disponible
 
-Recibe notificaciones sobre cambios de estado.
+Selecciona fechas y horarios válidos según la disponibilidad del profesional
 
-Maneja su propia cola de reintentos.
+Recibe correos cuando su cita es aceptada, cancelada o atendida
 
-Psicólogo
+Su cola de reintentos es independiente y privada
 
-Revisa todas las citas recibidas.
+## 👨‍⚕️ Psicólogo
 
-Acepta, cancela o marca como atendida.
+Visualiza todas las citas que le han solicitado
 
-Envía notificaciones al paciente.
+Puede aceptar, cancelar o marcar como atendida
 
-Administra su cola de reintentos independiente.
+Notifica automáticamente al paciente del cambio de estado
 
-🧪 Próximas mejoras
+Su cola de reintentos funciona de manera aislada del resto de usuarios
 
-Autenticación con Supabase Auth
+## 🧪 Próximas mejoras
 
-Guardado real de citas y usuarios en Supabase
+Autenticación profesional con Supabase Auth
 
-Dashboard profesional
+Migración completa a base de datos con Supabase
 
-Notificaciones push
+Dashboard moderno para psicólogos
 
-Deploy en Vercel
+Historial de pacientes y gestión avanzada
 
-👨‍💻 Autor
+Notificaciones push web
+
+Deploy final en Vercel
+
+## 👨‍💻 Autor
 
 Jeferson Espinoza
 GitHub: https://github.com/jefersonEspinoza29
