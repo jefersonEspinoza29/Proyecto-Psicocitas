@@ -20,6 +20,7 @@ cd Proyecto-Psicocitas && \
 npm install && \
 cp .env.example .env && \
 npm start
+```
 
 Sistema de Reintentos (Offline → Online)
 
